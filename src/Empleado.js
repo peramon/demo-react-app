@@ -6,7 +6,8 @@ export const Empleado = [
         nombre: 'Juan',
         apellido: 'Ramirez',
         email: 'juan@gmail.com',
-        rol: 'Asesor'
+        rol: 'Asesor',
+        genero: 'M'
 
     },
     {
@@ -14,7 +15,8 @@ export const Empleado = [
         nombre: 'Raul',
         apellido: 'Torres',
         email: 'raul@gmail.com',
-        rol: 'Asesor'
+        rol: 'Asesor',
+        genero: 'M'
 
     },
     {
@@ -22,7 +24,8 @@ export const Empleado = [
         nombre: 'Antonio',
         apellido: 'Suquilanda',
         email: 'antonio@gmail.com',
-        rol: 'Asesor'
+        rol: 'Asesor',
+        genero: 'M'
 
     },
     {
@@ -30,7 +33,8 @@ export const Empleado = [
         nombre: 'Lilia',
         apellido: 'Lozano',
         email: 'lilia@gmail.com',
-        rol: 'Asesor'
+        rol: 'Asesor',
+        genero: 'F'
     },
 
 ]

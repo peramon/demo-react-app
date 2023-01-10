@@ -9,6 +9,8 @@ import {
     ModalBody,
     FormGroup,
     ModalFooter,
+    Input,
+    Label,
 } from "reactstrap";
 import { Empleado } from "./Empleado";
 
@@ -31,6 +33,7 @@ class App extends React.Component {
             apellido: "",
             email: "",
             rol: "",
+            genero:"",
         },
     };
 
@@ -103,7 +106,7 @@ class App extends React.Component {
     };
 
     render() {
-
+        console.log(data);
         return (
             <>
                 <Container>
@@ -120,6 +123,7 @@ class App extends React.Component {
                                 <th>Apellido</th>
                                 <th>Email</th>
                                 <th>Rol</th>
+                                <th>Género</th>
                                 {/* TD Usar CSS para alinearlos */}
                                 <th style={{textAlign: "center"}}>Acciones</th>
                                 
@@ -134,6 +138,7 @@ class App extends React.Component {
                                     <td>{dato.apellido}</td>
                                     <td>{dato.email}</td>
                                     <td >{dato.rol}</td>
+                                    <td >{dato.genero}</td>
                                     {/* TD Usar CSS para alinearlos */}
                                     <td style={{textAlign: "center"}}>
                                         <Button
@@ -271,6 +276,8 @@ class App extends React.Component {
                                 className="form-control"
                                 name="nombre"
                                 type="text"
+                                placeholder="Ingrese el nombre del empleado"
+                                required
                                 onChange={this.handleChange}
                             />
                         </FormGroup>
@@ -283,6 +290,7 @@ class App extends React.Component {
                                 className="form-control"
                                 name="apellido"
                                 type="text"
+                                placeholder="Ingrese el apellido del empleado"
                                 onChange={this.handleChange}
                             />
                         </FormGroup>
@@ -295,6 +303,7 @@ class App extends React.Component {
                                 className="form-control"
                                 name="email"
                                 type="email"
+                                placeholder="ejemplo@gmail.com "
                                 onChange={this.handleChange}
                             />
                         </FormGroup>
@@ -307,9 +316,34 @@ class App extends React.Component {
                                 className="form-control"
                                 name="rol"
                                 type="text"
+                                placeholder="Asigne el rol del empleado - Auxiliar, Aistente, Pasante..."
                                 onChange={this.handleChange}
                             />
                         </FormGroup>
+
+                        <FormGroup>
+                            <Label check>
+                                Genero: <br />
+                                <hr />
+                            <Input
+                                // className="form-control"
+                                name="genero"
+                                type="radio"
+                                value={'M'}
+                                onChange={this.handleChange}
+                            /> {"Masculino "}
+                            &emsp;
+                            <Input
+                                // className="form-control"
+                                name="genero"
+                                type="radio"
+                                value={'F'}
+                                onChange={this.handleChange}
+                            /> Femenino
+                            </Label>
+                        </FormGroup>
+
+                        
                     </ModalBody>
 
                     <ModalFooter>
