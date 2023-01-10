@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 // import App from './FirstApp';
 // import MyName from './SecondApp';
-import CounterApp from './CounterApp';
 import Header from './Header';
 
 // import './styles.css'
