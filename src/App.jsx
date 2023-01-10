@@ -12,8 +12,14 @@ import {
 } from "reactstrap";
 import { Empleado } from "./Empleado";
 
+// Traer la data de los empelados
 const data = Empleado;
-const urlImageNewE = 'https://cdn-icons-png.flaticon.com/512/2997/2997899.png';
+
+// Url para imagenes de los iconos
+// const urlImageNewE = 'https://cdn-icons-png.flaticon.com/512/189/189689.png';
+const urlImageEdi = 'https://cdn-icons-png.flaticon.com/512/4302/4302115.png';
+const urlImageEli = 'https://cdn-icons-png.flaticon.com/512/8568/8568248.png';
+
 class App extends React.Component {
     state = {
         data: data,
@@ -102,7 +108,7 @@ class App extends React.Component {
             <>
                 <Container>
                     <br />
-                    <Button color="success" onClick={() => this.mostrarModalInsertar()}>Insertar Nuevo Empleado</Button>
+                    <Button color="success" onClick={() => this.mostrarModalInsertar()}>{" "}Insertar Nuevo Empleado</Button>
                     <br />
                     <br />
                     {/* Tabla para mostrar la información de Empleados */}
@@ -134,9 +140,11 @@ class App extends React.Component {
                                             color=""
                                             onClick={() => this.mostrarModalActualizar(dato)}
                                         >
-                                            <img src="src/img/editar.png" alt="Modificar"/>
+                                            <img src={ urlImageEdi } alt="Modificar" width="24px"/>
                                         </Button>{" "}
-                                        <Button color="" onClick={() => this.eliminar(dato)}> <img src="src/img/delete.png"/></Button>
+                                        <Button color="" onClick={() => this.eliminar(dato)}>
+                                             <img src={ urlImageEli } alt="Eliminar" width="24px"/>
+                                             </Button>
                                     </td>
                                 </tr>
                             ))}
@@ -237,12 +245,12 @@ class App extends React.Component {
 
                 <Modal isOpen={this.state.modalInsertar}>
                     <ModalHeader>
-                        <div><h3><img src={ urlImageNewE} alt="" width="24px"/>{" "}Nuevo Empleado</h3></div>
+                        <div><h3>{" "}Nuevo Empleado</h3></div>
                     </ModalHeader>
 
                     {/* Modal para ingresar nuevo empleado */}
                     <ModalBody>
-                        <FormGroup>
+                        {/* <FormGroup>
                             <label>
                                 Id:
                             </label>
@@ -253,7 +261,7 @@ class App extends React.Component {
                                 type="text"
                                 value={this.state.data.length + 1}
                             />
-                        </FormGroup>
+                        </FormGroup> */}
 
                         <FormGroup>
                             <label>
